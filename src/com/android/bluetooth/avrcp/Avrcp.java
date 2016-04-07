@@ -841,9 +841,6 @@ public final class Avrcp {
 
     private void sendTrackChangedRsp() {
         byte[] track = new byte[TRACK_ID_SIZE];
-
-        /* If no track is currently selected, then return
-           0xFFFFFFFFFFFFFFFF in the interim response */
         long trackNumberRsp = -1L;
 
         if (mCurrentPlayState == RemoteControlClient.PLAYSTATE_PLAYING) {
